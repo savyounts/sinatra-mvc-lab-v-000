@@ -6,7 +6,7 @@ class PigLatinizer
   end
 
   def piglatinize
-    words = self.text.split(" ")
+    words = text.split(" ")
     word.collect do |word|
       letters = word.split(/[aeiou]/)
       if letters[0] == (/[aeiou]/)
