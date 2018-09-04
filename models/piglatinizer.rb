@@ -10,12 +10,12 @@ class PigLatinizer
     words.collect do |word|
       letters = word.split(/([aeiou].*)/)
       if letters[0] == ""
-        letters << "ay"
+        letters << "way"
       else
         first = letters[1]
         last = letters[0]
         letters = [first, last]
-        letters << "way"
+        letters << "ay"
       end
         letters.join
     end.join(" ")
