@@ -12,4 +12,8 @@ class App < Sinatra::Base
     redirect '/piglatinize'
   end
 
+  get '/piglatinize'
+    erb :piglatinize
+  end
+
 end
