@@ -9,12 +9,11 @@ class PigLatinizer
     words = text.split(" ")
     words.collect do |word|
       letters = word.split(/([aeiou].*)/)
-      if letters[0] == (/([aeiou])/)
-        letters << "way"
-        letters.join
-      else
-        last = letters.pop
-        letters << last
+      unless letters[0] == ""
+        first = letters[1]
+        last = letters[0]
+        letters = [first, last]
+      end
         letters << "way"
         letters.join
       end
