@@ -6,12 +6,7 @@ class App < Sinatra::Base
     erb :user_input
   end
 
-  post '/' do
-    redirect '/piglatinize'
-  end
-
-  get '/piglatinize' do
-    @input = params[:user_phrase]
+  post '/piglatinize' do
     @translation = PigLatinizer.new
     erb :piglatinize
   end
