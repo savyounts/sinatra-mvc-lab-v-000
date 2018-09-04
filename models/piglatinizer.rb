@@ -7,7 +7,7 @@ class PigLatinizer
 
   def piglatinize
     words = text.split(" ")
-    word.collect do |word|
+    words.collect do |word|
       letters = word.split(/[aeiou]/)
       if letters[0] == (/[aeiou]/)
         letters << "way"
@@ -19,6 +19,6 @@ class PigLatinizer
         letters.join
       end
     end.join(" ")
-  end 
+  end
 
 end
