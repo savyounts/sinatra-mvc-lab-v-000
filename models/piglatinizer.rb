@@ -1,7 +1,6 @@
 class PigLatinizer
 
   def piglatinize(text)
-    text.join
     words = text.split(" ")
     words.collect do |word|
       letters = word.split(/([aeiouAEIOU].*)/)
