@@ -4,8 +4,8 @@ class PigLatinizer
   def initialize(text)
     @text = text
   end
-  
-  def piglatinize=
+
+  def piglatinize
     words = text.split(" ")
     words.collect do |word|
       letters = word.split(/([aeiou].*)/)
