@@ -8,6 +8,7 @@ class App < Sinatra::Base
 
   post '/user_input' do
     @translation = PigLatinizer.new(params[:textarea])
-    erb :user_input
+
+    erb :final_output
   end
 end
