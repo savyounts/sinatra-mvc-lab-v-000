@@ -1,7 +1,7 @@
 class PigLatinizer
   attr_reader :text
 
-  def piglatinize
+  def piglatinize(text)
     words = text.split(" ")
     words.collect do |word|
       letters = word.split(/([aeiou].*)/)
