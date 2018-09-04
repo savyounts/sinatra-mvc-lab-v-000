@@ -1,11 +1,7 @@
 class PigLatinizer
   attr_reader :text
 
-  def self.create(text)
-    @text = text
-  end
-
-  def piglatinize
+  def piglatinize(text)
     words = text.split(" ")
     words.collect do |word|
       letters = word.split(/([aeiouAEIOU].*)/)
