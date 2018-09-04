@@ -9,6 +9,10 @@ class App < Sinatra::Base
   post '/' do
     @translation = PigLatinizer.new
 
+    redirect '/piglatinize'
+  end
+
+  get '/piglatinize'
     erb :piglatinize
   end
 end
